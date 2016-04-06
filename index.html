@@ -190,8 +190,9 @@ body {
 		<div class="slide_wrap">
 			<div id="autoplay" style="display:none;">
 				<!-- //이미지 추가 -->
-				![kakaotalk_20160406_114511135](https://cloud.githubusercontent.com/assets/18300687/14324548/38e62680-fc60-11e5-980e-afd5e4e63870.jpg)
-
+				<img src="https://cloud.githubusercontent.com/assets/16554116/12774533/375b55dc-ca89-11e5-9829-e5984d1d2efa.jpg" class="img100" />
+				<img src="https://cloud.githubusercontent.com/assets/16554116/12774535/375cf090-ca89-11e5-8589-c69d0f62defb.jpg" class="img100" />
+				<img src="https://cloud.githubusercontent.com/assets/16554116/12774534/375c0694-ca89-11e5-8af1-88a7179c3ec1.jpg" class="img100" />
 			</div>
 		</div>
 		<div class="content_wrap">
@@ -273,15 +274,13 @@ body {
 		});
 		targetEle.css({"display" : "block"});
 		var tmpHeight = 0;
-		targetEle.find("img").first().load(function(e) {
-			targetEle.find("img").each(function(k, v) {
-				var _this = $(this);
-				if( tmpHeight == 0 || tmpHeight > _this.height() ) {
-					tmpHeight = _this.height();
-				}
-			});
-			$(".slide_wrap").height(tmpHeight);
+		targetEle.find("img").each(function(k, v) {
+			var _this = $(this);
+			if( tmpHeight == 0 || tmpHeight > _this.height() ) {
+				tmpHeight = _this.height();
+			}
 		});
+		$(".slide_wrap").height(tmpHeight);
 	});
 	
 	</script>
